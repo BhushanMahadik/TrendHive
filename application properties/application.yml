@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: TrendHive
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-request-size: 10MB
+
+server:
+  error:
+    include-message:always;
