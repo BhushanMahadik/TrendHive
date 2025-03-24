@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+<button id="payButton" data-order-id="1">Send</button>
+
+<script>
+    document.getElementById('payButton').onclick = function(e) {
+        const orderId = this.getAttribute('data-order-id');
+        const keyId = "key_Id"; // Replace with your keyId
+        const keySecret = "keySecret";  // Replace with your keySecret
+
+        fetch(`/api/payment/create-order/${orderId}/${keyId}/${keySecret}`, {
+            method: 'POST'
+        })
+        .then(response => response.text())
+        .then(paymentLink => {
+            window.location.href = paymentLink; // Redirect to the payment link
+        })
+        .catch(error => console.error('Error:', error));
+    };
+</script>
+</body>
+</html>
