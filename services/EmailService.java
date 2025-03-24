@@ -29,7 +29,7 @@ public class EmailService {
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);
-        message.setFrom("trendhivedev@gmail.com");
+        message.setFrom("youremail@gmail.com");
         mailSender.send(message);
         log.info("Email send successfully to user {}...",to);
     }
@@ -41,7 +41,7 @@ public class EmailService {
         message.setTo(to);
         message.setSubject("Your OTP");
         message.setText("Your OTP is: " + otp);
-        message.setFrom("trendhivedev@gmail.com");
+        message.setFrom("youremail@gmail.com");
         mailSender.send(message);
         log.info("Email send successfully to user {}...",to);
     }
