@@ -1,0 +1,19 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /test/api/${spring.application.name}
+
+spring:
+  application:
+    name: postify
+    datasource:
+      url: jdbc:mysql://localhost:3306/your application name 
+      username: root
+      password: root
+    jpa:
+      hibernate:
+        ddl-auto: validate
+      show-sql: true
+      properties:
+        hibernate:
+          dialeet: org.hibernate.dialect.MySQLDislect
