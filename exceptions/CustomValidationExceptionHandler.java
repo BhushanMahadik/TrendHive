@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.ArrayList;
 import java.util.List;
-
+ 
 @ControllerAdvice
 public class CustomValidationExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
