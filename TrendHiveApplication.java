@@ -20,7 +20,7 @@ public class TrendHiveApplication {
 	public void init(){
 		try{
 			System.out.println("Creating super user....");
-			userService.createSuperUser("Bhushan","Bhushan@1234","mahadikbhushan768@gmail.com","Dombivili	");
+			userService.createSuperUser("your usernmae","your password","youremail@gmail.com","Your city");
 			System.out.println("Super user created.");
 		} catch (Exception e) {
 			e.printStackTrace();
